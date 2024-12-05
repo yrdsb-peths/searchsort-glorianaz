@@ -7,7 +7,23 @@ public class BinarySearch extends Search {
      */
     @Override
     public int find(int[] arr, int target) {
-        return 0;
+        int low = 0;
+        int high = arr.length - 1;
+        while (low < high)
+        {
+            int mid = (low +_ high) / 2;
+            if(target < arr[mid])
+            {
+                high = mid - 1;
+            }else if(key > a[mid]) {
+               low = mid + 1;
+            }else 
+            {
+                return mid;
+            }
+
+        }
+        return -1;
     }
 
 }
