@@ -9,13 +9,13 @@ public class BinarySearch extends Search {
     public int find(int[] arr, int target) {
         int low = 0;
         int high = arr.length - 1;
-        while (low < high)
+        while (low <= high)
         {
             int mid = (low +_ high) / 2;
             if(target < arr[mid])
             {
                 high = mid - 1;
-            }else if(key > a[mid]) {
+            }else if(key > arr[mid]) {
                low = mid + 1;
             }else 
             {
