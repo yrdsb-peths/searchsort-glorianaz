@@ -11,11 +11,11 @@ public class BinarySearch extends Search {
         int high = arr.length - 1;
         while (low <= high)
         {
-            int mid = (low +_ high) / 2;
+            int mid = (low + high) / 2;
             if(target < arr[mid])
             {
                 high = mid - 1;
-            }else if(key > arr[mid]) {
+            }else if(target > arr[mid]) {
                low = mid + 1;
             }else 
             {
