@@ -48,7 +48,7 @@ public class QuickSort extends Sort {
         int j = high + 1;
         while(true)
         {
-            while(arr[++1] < arr[low])
+            while(arr[++i] < arr[low])
             {
                 if(j == low)
                 {
