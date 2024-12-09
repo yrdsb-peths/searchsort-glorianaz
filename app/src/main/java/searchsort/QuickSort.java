@@ -35,7 +35,7 @@ public class QuickSort extends Sort {
         {
             while(arr[++i] < arr[low])
             {
-                if(j == low)
+                if(i == high)
                 {
                     break;
                 }
