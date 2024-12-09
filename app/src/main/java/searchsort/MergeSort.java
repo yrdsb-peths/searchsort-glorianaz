@@ -21,7 +21,7 @@ public class MergeSort extends Sort {
         int mid = (low + high) / 2;
 
         // recursively sorting the array
-        mergeSort(arr, aux, low, high);
+        mergeSort(arr, aux, low, mid);
         mergeSort(arr, aux, mid + 1, high);
 
         // merge the 2 sorted halves
