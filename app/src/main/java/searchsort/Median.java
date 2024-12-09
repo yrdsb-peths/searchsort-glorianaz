@@ -23,7 +23,7 @@ public class Median {
 
         if(arr.length % 2 == 0)
         {
-            return (arr[(min + max)]/ 2) + arr[(min + max) / 2 + 1] / 2.0;
+            return (arr[(min + max) / 2] + arr[(min + max) / 2 + 1]) / 2.0;
         }
 
         return arr[(min + max) / 2];
