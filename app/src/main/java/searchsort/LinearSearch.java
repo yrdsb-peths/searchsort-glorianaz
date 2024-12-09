@@ -7,9 +7,9 @@ public class LinearSearch {
      */
     public static int find(int[] arr, int target) {
         // iterate through the array 
-        for(int i = 0l i < arr.length; i++)
+        for(int i = 0; i < arr.length; i++)
         {
-            if(arr[i] == tagret)
+            if(arr[i] == target)
             {
                 // returning index if target is found
                 return i;
