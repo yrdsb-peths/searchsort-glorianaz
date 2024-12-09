@@ -6,9 +6,10 @@ public class QuickSort extends Sort {
      */
     @Override
     public void sort(int[] arr) {
-        if (arr == null || arr.length == 0) {
+        if (arr == null || arr.length == 1) {
             return;
         }
+        Util.shuffle(arr, null);
         quickSort(arr, 0, arr.length - 1);
     
     }
@@ -35,7 +36,7 @@ public class QuickSort extends Sort {
         int j = high + 1;
         while(true)
         {
-            while(arr[++i] < arr[low])
+            while(i < high && arr[++i] < arr[low])
             {
                 if(i == high)
                 {
@@ -43,7 +44,7 @@ public class QuickSort extends Sort {
                 }
             }
 
-            while(arr[--j] > arr[low])
+            while(j > low && arr[--j] > arr[low])
             {
                 if(j == low)
                 {
