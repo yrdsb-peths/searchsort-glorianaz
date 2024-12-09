@@ -50,12 +50,8 @@ public class Util {
      * Check if the array arr is sorted in ascending order.
      */
     public static boolean isSorted(int[] arr) {
-        int largest = 0;
-        for(int i = 0; i < arr.length; i++) {
-            if(largest < arr[i]) {
-                largest = arr[i];
-            }
-            if(largest > arr[i]) {
+        for(int i = 1; i < arr.length; i++) {
+            if (arr[i - 1] > arr[i]) {
                 return false;
             }
         }
