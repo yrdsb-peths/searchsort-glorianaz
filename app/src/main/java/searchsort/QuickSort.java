@@ -21,6 +21,7 @@ public class QuickSort extends Sort {
         if(low < high)
         {
             int p = partition(arr, low, high);
+            // recursively sort the left and right subarrays
             quickSort(arr, low, p - 1);
             quickSort(arr, p + 1, high);
         }
@@ -33,16 +34,16 @@ public class QuickSort extends Sort {
      */
     private int partition(int[] arr, int low, int high) {
         int i = low - 1;
-        int elem = arr[high];
+        int elem = arr[high]; // choose the last element of the pivot 
      
         for (int j = low; j < high; j++) {
             if (arr[j] <= elem) {
                 i++; 
 
-                Util.exch(arr, i, j);
+                Util.exch(arr, i, j); // swap the current elements
             }
         }
-        Util.exch(arr, i + 1, high);
+        Util.exch(arr, i + 1, high); //  place pivot in correct position
 
         return i + 1;
     }

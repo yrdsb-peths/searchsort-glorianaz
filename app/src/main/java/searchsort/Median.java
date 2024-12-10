@@ -20,14 +20,16 @@ public class Median {
         QuickSort quick = new QuickSort();
         quick.sort(arr);
 
+        // calculate median based on array size
         int max = arr.length - 1;
         int min = 0;
 
+        // if array is even
         if(arr.length % 2 == 0)
         {
             return (arr[(min + max) / 2] + arr[(min + max) / 2 + 1]) / 2.0;
         }
-
+        // if array is odd
         return arr[(min + max) / 2];
     }
 
@@ -35,8 +37,6 @@ public class Median {
      * Find the median of the array arr using MergeSort algorithm.
      */
     public double findMerge(int[] arr) {
-        
-
         if(arr.length == 0 || arr == null)
         {
             return 0.0;
@@ -48,6 +48,7 @@ public class Median {
         int max = arr.length - 1;
         int min = 0;
 
+        // calculate median based on array size
         if(arr.length % 2 == 0)
         {
             return (arr[(min + max) / 2]  + arr[(min + max) / 2 + 1]) / 2.0;
